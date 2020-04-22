@@ -32,38 +32,29 @@ function get_settings() {
     return $o;
 }
 
-/////////////////////////////////
 function get($index = "", $html_escape = true) {
-
     if ($index) {
         $o = (isset($_GET[$index])) ? trim(mysql_real_escape_string($_GET[$index])) : "";
 
         return ($html_escape ? htmlspecialchars($o) : $o);
     }
-
-
-
     return "";
 }
 
-//////////////////////
 function post($index = "", $html_escape = true) {
-
     if ($index) {
         $o = (isset($_POST[$index])) ? trim(mysql_real_escape_string($_POST[$index])) : "";
 
         return ($html_escape ? htmlspecialchars($o) : $o);
     }
-
-
-
     return "";
 }
 
 function obclean() {
 
-    if (ob_get_length())
+    if (ob_get_length()){
         ob_end_clean();
+    }
 }
 
 function send_mail($subject, $message, $to) {
@@ -151,7 +142,7 @@ add_hook('ClientEdit', 1, function($vars) {
         'LNAME' => $vars['lastname']
     ));
 });
-//////////////////////////////////////////////////////////
+
 add_hook('EmailPreSend', 1, function($vars) {
 
 

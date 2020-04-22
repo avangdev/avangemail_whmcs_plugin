@@ -84,5 +84,6 @@ INSERT INTO `mod_avang_mail_settings` (`word`, `value`, `label`, `help`, `type`,
 }
 
 function avang_mail_deactivate() {
+    full_query('DROP TABLE IF EXISTS `mod_avang_mail_settings`;');   
     return array('status' => 'success', 'description' => 'The module successfully disabled');
 }
