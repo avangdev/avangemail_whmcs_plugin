@@ -57,14 +57,14 @@ function avang_mail_output($vars) {
 
 function avang_mail_activate() {
     $sql = "CREATE TABLE IF NOT EXISTS `mod_avang_mail_settings` (
-  `word` varchar(64) COLLATE utf8_persian_ci NOT NULL,
-  `value` text COLLATE utf8_persian_ci NOT NULL,
-  `label` varchar(255) COLLATE utf8_persian_ci NOT NULL,
-  `help` text COLLATE utf8_persian_ci NOT NULL,
-  `type` varchar(32) COLLATE utf8_persian_ci NOT NULL DEFAULT 'text',
+  `word` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `value` text COLLATE utf8_unicode_ci NOT NULL,
+  `label` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `help` text COLLATE utf8_unicode_ci NOT NULL,
+  `type` varchar(32) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'text',
   `ltr` tinyint(1) NOT NULL DEFAULT '0',
   `sorting` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 /********#######SQL########*******/
 INSERT INTO `mod_avang_mail_settings` (`word`, `value`, `label`, `help`, `type`, `ltr`, `sorting`) VALUES
 ('public_key', '', 'Public key', '', 'text', 1, 1),
