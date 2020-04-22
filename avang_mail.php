@@ -71,7 +71,7 @@ INSERT INTO `mod_avang_mail_settings` (`word`, `value`, `label`, `help`, `type`,
 ('lists', '', 'Please insert list unique id', 'Email list unique id', 'text', 1, 3),
 ('private_key', '', 'Private key', '', 'text', 1, 2),
 ('host', 'https://send.avangemail.com/', 'Email host address', '', 'text', 1, 4),
-('apikey', '', 'Send Email API', '', 'text', 1, 5)
+('apikey', '', 'Send Email APIKEY', '', 'password', 1, 5)
 /********#######SQL########*******/
 ALTER TABLE `mod_avang_mail_settings` ADD UNIQUE KEY `word` (`word`)
 /********#######SQL########*******/
