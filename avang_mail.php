@@ -5,10 +5,10 @@ use WHMCS\Database\Capsule;
 function avang_mail_config() {
     $configarray = array(
         "name" => "AvangEmail, Email Delivery Service for Marketers and Developers",
-        "description" => "AvangEmail, Email Delivery Service for Marketers and Developers",
+        "description" => "AvangEmail, Email Delivery",
         "version" => "1.1",
         "author" => "<a href='https://avangemail.com/' target='_blank'><strong>AvangEmail</strong></a>",
-        "language" => "Persian",
+        "language" => "english",
         'fields' => [
             'License' => [
                 'FriendlyName' => 'License code',
